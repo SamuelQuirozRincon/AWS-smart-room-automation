@@ -2,7 +2,7 @@
 
 **Project Status:** In Progress
 **Project Type:** Cloud / IoT Portfolio Project
-**Project Owner:** [Your Name]
+**Project Owner:** Samuel Quiriz-Rincon
 
 ## Project Overview
 
