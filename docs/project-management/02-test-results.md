@@ -112,3 +112,19 @@ I then disconnected and reconnected the MQTT test client. After reconnecting, I 
 ### Conclusion
 
 The AWS Lambda function successfully communicates with AWS IoT Core using MQTT. This verifies the cloud command publishing portion of my smart room automation project.
+
+## API Gateway Integration Test - October 27, 2026
+
+**Result: Passed**
+
+I tested the SmartRoomControlAPI using an IAM-authenticated HTTP POST request through AWS CloudShell.
+
+The request successfully passed through API Gateway, triggered the SmartRoomCommandRouter Lambda function, and published an MQTT message through AWS IoT Core.
+
+I confirmed that the MQTT test client received the message on the topic `smartroom/bedroom/command/test-device`.
+
+I also troubleshot an MQTT test client connection issue by reconnecting and repeating the test.
+
+This confirmed that my AWS API Gateway, Lambda, and IoT Core command pipeline works.
+
+Home Assistant integration still needs to be completed and tested.
