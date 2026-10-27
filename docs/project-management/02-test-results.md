@@ -128,3 +128,19 @@ I also troubleshot an MQTT test client connection issue by reconnecting and repe
 This confirmed that my AWS API Gateway, Lambda, and IoT Core command pipeline works.
 
 Home Assistant integration still needs to be completed and tested.
+
+## EventBridge Scheduler Integration Test - October 27, 2026
+
+**Result: Passed**
+
+I created a one-time AWS EventBridge schedule named `SmartRoom-Scheduler-Test`.
+
+The schedule invoked my `SmartRoomCommandRouter` Lambda function using a test device payload.
+
+Lambda published the command to AWS IoT Core, and I confirmed that the MQTT test client received the message.
+
+The schedule was configured to automatically delete itself after completion.
+
+This test demonstrated event-driven serverless automation using Amazon EventBridge Scheduler, AWS Lambda, and AWS IoT Core.
+
+**Next step:** Connect AWS IoT Core to Home Assistant so scheduled cloud commands can control physical smart room devices.
